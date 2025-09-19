@@ -33,3 +33,18 @@ Genotype could be considered as the collection of traits that any one of your in
 The phenotype would then be how these "genes" present.
 
 In a basic example, a genotype could be a byte and the phenotype could be the 256 bit color it represents.
+For the string guesser example in the repo, this is that creation
+
+```python
+def get_rand_char() -> str:
+    return random.choice(string.ascii_letters + ' ')
+
+def get_rand_string(len: int) -> str:
+
+    return ''.join([get_rand_char() for _ in range(len)])
+
+
+population = [get_rand_string(len(goal)) for _ in range(pop_size)]
+```
+
+### Step 2: Selection
